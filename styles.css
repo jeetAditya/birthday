@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing Script&family=Source+Code+Pro');
+
+body {
+  margin: 0;
+  background: #020202;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes colour-change {
+  0% { color: red; }
+  20% { color: orange; }
+  40% { color: yellow; }
+  60% { color: green; }
+  80% { color: blue; }
+  100% { color: purple; }
+}
+
+h1.birthday-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Dancing Script";
+  font-size: 3em;
+  font-weight: 200;
+  -webkit-user-select: none;
+  user-select: none;
+  animation: colour-change 5s infinite;
+  padding-bottom: 30px;
+  /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateY(50%);
+}
+
+.card1 {
+  transform: translate(10%, 50%) rotate(-10deg);
+}
+
+.card2 {
+  transform: translate(-25%, 60%) rotate(20deg);
+}
+
+.card1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+img.sticker {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-60%);
+  width: 25%;
+  height: 25%;
+  object-fit: contain;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #020202;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+}
+
+#loader p {
+  margin: 0;
+}
+
+#play-music {
+    position: fixed;
+    top: 10px; /* Position from the top */
+    right: 10px; /* Position from the right */
+    z-index: 1000; /* Ensure it stays on top */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    font-size: 16px; /* Font size */
+  }
+  
+  #play-music:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+  }
+  .birthday-cake {
+    display: block;
+    margin: 20px auto; /* Centers the image horizontally */
+    max-width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+ /* Ensure the entire page takes up at least the full height of the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content should take up all available space above the footer */
+#content {
+  flex: 1;
+}
+
